@@ -1,4 +1,7 @@
 node {
+  stage('SCM') {
+    git 'https://github.com/Sebrag/devops.git'
+  }
   stage('SonarQube analysis') {
     def scannerHome = tool 'bugscout';
     withSonarQubeEnv('bs4') {
