@@ -11,9 +11,9 @@ node {
     timeout(time: 5, unit: 'MINUTES') { 
       def qualityGate = waitForQualityGate() 
         if (qualityGate.status != 'OK' && qualityGate.status != 'WARN') {
-          error "O código não está de acordo com as regras do BugScout: ${qualityGate.status} -Dsonar.login=gzanella -Dsonar.password=guilherme123"
+          error "O código não está de acordo com as regras do BugScout: ${qualityGate.status}"
         } else {
-           println "O código está de acordo com as regras do BugScout: ${qualityGate.status} -Dsonar.login=gzanella -Dsonar.password=guilherme123"
+           println "O código está de acordo com as regras do BugScout: ${qualityGate.status}"
         }
     }
   }
