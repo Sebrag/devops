@@ -6,7 +6,7 @@ node {
     def scannerHome = tool 'bugscout';
     withSonarQubeEnv('bs4') {
       // sh "${scannerHome}/bin/sonar-scanner"
-      sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=https://bugscout.local -Dsonar.projectName=pip-jenkins -Dsonar.projectVersion=1.0 -Dsonar.projectKey=pip-jenkins -Dsonar.sources=. -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/pip-jenkinsfile -Dsonar.login=gzanella -Dsonar.password=guilherme123"
+      sh "${scannerHome}/bin/sonar-scanner -Dsonar.host.url=https://bugscout.local -Dsonar.projectName=pip-jenkins -Dsonar.projectVersion=1.0 -Dsonar.projectKey=pip-jenkins -Dsonar.sources=. -Dsonar.projectBaseDir=/var/lib/jenkins/workspace/pip-jenkinsfile -Dsonar.login=xxx -Dsonar.password=xxx"
         }
     }
   stage("Quality Gate") { 
